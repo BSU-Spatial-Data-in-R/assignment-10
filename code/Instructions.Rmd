@@ -1,0 +1,48 @@
+---
+title: "Making better static maps and introducing interactive maps"
+author: "Matt Williamson"
+date: "10/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Your assignment
+
+The goals for this assignment are to:
+
+- get you comfortable with adding layers to static maps
+- practice adding additional visual elements to improve the clarity and effectiveness of your maps
+- take a first step towards interactive maps
+
+_By the end of the assignment_ you should have a publication-quality static map and a functional interactive map
+
+
+# Task 1: Load your libraries and build a dataframe
+I've added a number of CONUS-wide datasets to the class folder for this week (HMI, species richness). You are welcome to use these or begin to work with the data from your project. Use a combination of tabular joins, spatial joins, and extract to attach the data to the geography of interest (e.g.., states, counties, protected areas). You should end up with an `sf` that contains at least 4 variables beyond those that come directly with the geometry (e.g., area, name, etc).  Load the packages, the data, and make sure everything is projected here. Give me a sense for what you are hoping to map.
+
+
+# Task 2: Build a map with ggplot
+Your map should include a basemap that provides context (like from `ggmap` or elsewhere) and have at least 2 variables mapped to the aesthetics (color, transparency, etc) of the map. Your map should also include a aorth arrow and have the polygons labeled with an identifier (e.g., the abbreviation for state, the name of the county, etc). 
+
+_Question 1:_ How might you get all 4 of your variables to display on the map without overwhelming the viewer?
+
+
+# Task 3: Try a different basemap
+A major justification for using basemaps is their ability to provide the viewer with additional contest to help them locate your data "in a place". `ggmap` has a number of dfferent options that you can use. Use the code from Task 2 to make the same map, but with a different basemap.
+
+_Question 2:_ Compare the two maps (with the different basemaps). How might you approach deciding which basemap is the most appropriate for your map?
+
+# Task 4: Add an inset map
+Add an inset to your map that provides information on the location you are mapping.
+
+
+# Task 5: Convert your map into a plotly interactive map
+Follow the examples from the class webpage to build an interactive map. The map should use color to display 1 of your variables and use a "hover" window as a means of conveying the other variables.
+
+_Question 3:_ Compare the interactive map to the static map you've made. In what ways is the interactive map better? Worse? How might you improve the overall visualization (e.g., adding elements, removing elements, building multi-panel plots)?
+
+
