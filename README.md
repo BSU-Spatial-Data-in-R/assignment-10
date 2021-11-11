@@ -1,7 +1,7 @@
-# assignment-09
-This is the seventh assignment of the semester for HES 597. 
+# assignment-10
+This is the tenth assignment of the semester for HES 597. 
 
 ## Learning objectives for this assignment are:
-- Continue to practice building static maps with multiple layers
-- Practice adding text, ornaments, and other non-spatial info to maps
-- Build a simple interactive map using `plotly`
+- Learn the importance of simulation for understanding complex topic
+- Explore the role of scale in determining how we interpret analyses
+- fit a regression to spatial covariates
