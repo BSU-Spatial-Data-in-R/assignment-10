@@ -26,7 +26,9 @@ This semester we've spent a lot of time processing spatial datasets for the Paci
 1. Get data to visualize from the following sources:
 
   a. Use the `occ_search` function from `rgbif` to pull at least 1000 observations of a species of your choice in a country of your choice: `occurance.df <- occ_search(scientificName = "Any Species Name", country = "Any Country", hasCoordinate = TRUE, limit=1000)`
+  
   b. Use the `geodata` package to pull a raster of interest - some variable that you think is relevant to your species. Possible functions for different types of data can be seen [here](https://github.com/rspatial/geodata?tab=readme-ov-file). Here's an example: `soils <- geodata::soil_world(var = "nitrogen", depth=5, path=tempfile())`. Use `path=tempfile()` to download a version that will be deleted when the R server restarts, but if this give you trouble, use `path=getwd()`. If you do this, _do not_ commit this data and push it to GitHub.
+  
   c. Use the `geodata` package to pull in state/province/equivalent level boundaries for your country of choice using `geodata::gadm(country = "Your Country", level=1, path=tempfile())`. The same `tempfile()` instructions for part b apply here. This data will be downloaded as a `SpatVector` and can be transformed to an `sf` object with `st_as_sf()`.
   
 2. Write pseudocode for how you will prepare your data for visualization. Some possible objectives might be cropping your data to an area of interest and transforming the data to tidy format.
